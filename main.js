@@ -33,7 +33,7 @@ function getTimes() {
   let searchInputValue = searchInput.value;
   if (searchInputValue != "") {
     fetch(
-      `http://api.aladhan.com/v1/timingsByCity?city=${searchInputValue}&country=Egypt&method=5`
+      `https://api.aladhan.com/v1/timingsByCity?city=${searchInputValue}&country=Egypt&method=5`
     )
       .then((e) => e.json())
       .then((e) => {
