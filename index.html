@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواقيت الصلاة</title>
+</head>
+<body>
+    <!-- Start Header -->
+    <header>
+    <div class="logo">
+        <a href="index.html"><img src="imges/noyan 2.png" alt="logo"></a>
+    </div>
+    
+    <nav>
+        <i class="fa-solid fa-bars"></i>
+        <ul>
+            <li><a href="#times">مواقيت الصلاة <i class="fa-solid fa-mosque"></i></a></li>
+            <li><a target="_blank" href="https://api.whatsapp.com/send/?phone=201015405904">اتصل بنا <i class="fa-brands fa-whatsapp"></i></a></li>
+        </ul>
+    </nav>
+    </header>
+    <!-- End Header -->
+    <div class="main">
+        <div class="timeNow">
+            <p id="timeNow"><span id="hours"></span>: <span id="min"></span>: <span id="seconds"></span></p>
+            <div class="MooonSun">
+                <span id="moon"><i class="fa-solid fa-moon"></i></span>
+                <span id="sun"><i class="fa-solid fa-sun"></i></span>
+            </div>
+        </div>
+        <div class="times" id="times">
+            <div class="container">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass" id="searchIcon" onclick="getTimes()"></i>
+                    <input type="text" name="search" id="search" placeholder="اسم المحافظة">
+                </div>
+            </div>
+            <div class="prayers">
+                <div class="box">
+                    <h3><i class="fa-solid fa-mosque"></i>  الفجر</h3> 
+                    <p id="Fajr">00:00</p>
+                </div>
+                <div class="box">
+                    <h3><i class="fa-solid fa-mosque"></i>  الشروق</h3> 
+                    <p id="Sunrise">00:00</p>
+                </div>
+                <div class="box">
+                    <h3><i class="fa-solid fa-mosque"></i>  الظهر</h3> 
+                    <p id="Dhuhr">00:00</p>
+                </div>
+                <div class="box">
+                    <h3><i class="fa-solid fa-mosque"></i>  العصر</h3> 
+                    <p id="Asr">00:00</p>
+                </div>
+                <div class="box">
+                    <h3><i class="fa-solid fa-mosque"></i>  المغرب</h3> 
+                    <p id="Maghrib">00:00</p>
+                </div>
+                <div class="box">
+                    <h3><i class="fa-solid fa-mosque"></i>  العشاء</h3> 
+                    <p id="Isha">00:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

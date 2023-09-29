@@ -1,0 +1,398 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+body{
+    background-color: #22313f;
+
+    color: wheat;
+}
+:root{
+    --background-color:#222327;
+    --first-color-green:#29fd53;
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width:7px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(74, 75, 76);
+}
+::-webkit-scrollbar-thumb{
+    background-color: #ffffff;
+    box-shadow: 1px 0px 8px 0px #29fd53;
+    border-radius: 40px;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--background-color);
+    color: var(--first-color-green);
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    @media (min-width: 768px) {
+        .container {
+        width: 750px;
+        }
+    }
+    @media (min-width: 992px) {
+        .container {
+        width: 970px;
+        }
+    }
+    @media (min-width: 1200px) {
+        .container {
+        width: 1170px;
+        }
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+
+/* Start Header */
+header{
+    padding: 20px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px #393939;
+    height: 93px;
+    position: relative;
+    background-color: transparent;
+    /* overflow: hidden; */
+}
+header::before{
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header .logo{
+    width: 110px;
+}
+header .logo img{
+    max-width: 100%;
+}
+@media (max-width:800px) {
+
+    header .logo{
+        width: 80px;
+    }
+}
+header nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+header nav ul{
+    display: flex;
+}
+.fa-bars{
+    display: none;
+}
+@media (max-width:817px) {
+    header nav ul{
+        position: absolute;
+        transform: translate(-50%,200%);
+        left: 50%;
+        z-index: -1;
+    }
+    .fa-bars{
+        display: block;
+        font-size: 23px;
+        cursor: pointer;
+    }
+}
+header nav ul.active{
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 33;
+    bottom: -138px;
+    width: 95%;
+    left: 50%;
+    transform: translateY(0);
+    transform: translateX(-50%);
+    right: 0;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #29fd53f7;
+    box-shadow: 1px 0px 8px 0px var(--first-color-green);
+}
+header nav ul.active li{
+    margin: 7px auto;
+}
+header nav ul.active li a,header nav ul.active li a i{
+    color: var(--background-color);
+}
+
+header nav ul li{
+    padding: 10px 10px;
+    overflow: hidden;
+    width: fit-content;
+    position: relative;
+    border-radius: 5px;
+}
+header nav ul li a{
+    padding:15px;
+    font-size: 18px;
+    color: var(--second-color-black);
+    font-weight: 600;
+    color: #2196f3;
+    color: var(--first-color-green);
+    transition: 0.3s;
+    width: 100%;
+}
+header nav ul li a i{
+    padding-left: 3px;
+    transition: 0.3s;
+    color: white;
+}
+header nav ul li:hover{
+    background-color: var(--first-color-green);
+    color: var(--background-color);
+}
+header nav ul li:hover > a{
+    color: var(--background-color);
+}
+header nav ul li:hover >a i{
+    color: var(--background-color);
+}
+i.fa-whatsapp{
+    font-size: 20px;
+}
+header nav ul li:hover i.fa-whatsapp{
+    color: var(--background-color);
+}
+
+/* End Header */
+/* Start Main */
+.main{
+    min-height: 87vh;
+    background-color: #ececec;
+    background-color: var(--background-color);
+    position: relative;
+}
+.timeNow{
+    text-align: center;
+    padding: 20px;
+    border: 2px solid white;
+    width: 300px;
+    max-width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25px;
+    border-radius: 8px;
+    font-family: 'Black Ops One', cursive;
+    box-shadow: 1px 0px 8px 0px rgba(255,255,255,0.75);
+    -webkit-box-shadow: 1px 0px 8px 0px rgba(255,255,255,0.75);
+    -moz-box-shadow: 1px 0px 8px 0px rgba(255,255,255,0.75);
+}
+.timeNow::before{
+    content: "الساعة الان";
+    font-family: 'Cairo', sans-serif;
+    position: absolute;
+    left: -47px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid white;
+    padding: 3px;
+    font-size: 19px;
+    border-radius: 5px;
+    background-color: #222327;
+    box-shadow: 1px 0px 8px 0px rgba(255,255,255,0.75);
+    -webkit-box-shadow: 1px 0px 8px 0px rgba(255,255,255,0.75);
+    -moz-box-shadow: 1px 0px 8px 0px rgba(255,255,255,0.75);
+}
+.timeNow p{
+    font-size: 25px;
+    font-family: 'Black Ops One', cursive;
+}
+.timeNow p span{
+    font-size: 30px;
+    font-family: 'Black Ops One', cursive;
+    padding: 3px;
+}
+.MooonSun{
+    border-radius: 50%;
+    position: absolute;
+    right: -17px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid white;
+    text-align: center;
+    background-color: #222327;
+    padding: 4px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 0px 8px 0px rgba(255,255,255,0.75);
+}
+#moon{
+display: none;
+}
+#sun{
+    display: none;
+    color: yellow;
+}
+@media (max-width:768px) {
+    .timeNow{
+        width:170px;
+    }
+    .timeNow::before{
+        font-size: 15px;
+        left: -62px;
+    }
+    .timeNow p{
+        font-size: 20px;
+    }
+    .timeNow p span{
+        font-size: 20px;
+    }
+}
+.times{
+    position: absolute;
+    top: calc(60% + 30px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.times .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+.times .container .search{
+    width: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 40px;
+    background-color: transparent;
+    border: 1px solid #29fd53;
+    box-shadow: 1px 0px 8px 0px #29fd53;
+}
+.times .container .search i{
+    font-size: 20px;
+    color: black;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+.times .container .search input{
+    flex: 1;
+    border-radius: 40px;
+    padding: 15px 20px;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    direction: rtl;
+    font-size: 20px;
+    color: white;
+
+}
+@media (max-width:768px){
+    .times .container .search{
+        width: 290px;
+
+    }
+    .times .container .search input{
+        font-size: 16px;
+        padding: 13px 18px;
+
+    }
+    .times .container .search i{
+        font-size: 18px;
+    }
+}
+.prayers{
+    display: grid;
+    direction: rtl;
+    gap: 5px;
+    overflow: hidden;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.prayers .box{
+    border: 1px solid;
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    max-width: 100%;
+    transform: translateX(101%);
+    transition: 0.3s;
+}
+.box.active{
+    transform: translateX(0);
+    position: relative;
+    overflow: hidden;
+}
+.box.active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:var(--first-color-green);
+    box-shadow: 1px 0px 8px 0px #29fd53;
+    z-index: -100;
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+    transition: 0.3s;
+}
+.box.active:hover::before{
+    transform: rotate(0deg);
+}
+.box.active:hover{
+    color: var(--background-color);
+}
+.box.active h3 i{
+    padding-left: 5px;
+}
+.prayers .box p{
+    font-family: 'Black Ops One', cursive;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+@media (max-width:320px) {
+    .prayers .box{
+        width: 280px;
+    }
+    .prayers .box p{
+        font-size: 20px;
+    }
+}
+/* End Main */
